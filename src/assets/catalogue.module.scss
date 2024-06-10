@@ -1,0 +1,55 @@
+@import './variables.scss';
+@import './mixins';
+@import './colors.scss';
+
+.CataloguePage {
+  &__title {
+    @include headline-1;
+    margin-bottom: 8px;
+  }
+
+  &__CatalogueCount {
+    @include buttonsText;
+    margin-bottom: 32px;
+
+    color: $secondary;
+
+    @include onTablet {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__container {
+    display: grid;
+    row-gap: 40px;
+    margin-bottom: 24px;
+
+    @include pageGrid;
+  }
+}
+
+.favoritePage {
+  &__top {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  &__clear {
+    font-family: "MontRegular", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #b4bdc3;
+  }
+}
+
+.NotFondProduct {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &_img {
+    width: 60%;
+  }
+}

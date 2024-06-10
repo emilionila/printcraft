@@ -1,0 +1,1 @@
+export { FooterRights } from './FooterRights';

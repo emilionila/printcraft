@@ -1,0 +1,40 @@
+@import '../../assets/normalize.scss';
+@import '../../assets/colors.scss';
+
+.logo{
+  &.active {
+    &::after {
+      display: none;
+    }
+  }
+  
+  &__img {
+    display: block;
+    width: 100%;
+
+    &:hover {
+      animation: wave 2s infinite linear;
+    }
+  
+    &.active {
+      position: relative;
+      color: $primary;
+    }
+  }
+}
+
+@keyframes wave {
+  0%,
+
+  100% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(-4px);
+  }
+
+  75% {
+    transform: translateY(4px);
+  }
+}

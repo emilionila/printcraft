@@ -1,0 +1,13 @@
+@import "../../assets/variables";
+@import "../../assets/colors";
+@import "../../assets/mixins";
+
+.mainTitle {
+  @include headline-1;
+  color: $primary;
+  margin-bottom: 24px;
+
+  @include onTablet {
+    margin-bottom: 56px;
+  }
+}

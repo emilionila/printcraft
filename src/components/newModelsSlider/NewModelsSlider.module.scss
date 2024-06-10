@@ -1,0 +1,15 @@
+@import "../../assets/normalize";
+@import '../../assets/colors';
+@import '../../assets/variables';
+@import "../../assets/mixins";
+
+.section{
+  margin-bottom: 32px;
+}
+
+.sectionTitle {
+  @include headline-2;
+  color: $primary;
+
+  margin-bottom: 24px;
+}

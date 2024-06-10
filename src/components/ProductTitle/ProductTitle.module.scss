@@ -1,0 +1,9 @@
+@import "../../assets/normalize";
+@import "../../assets/variables";
+@import "../../assets/colors";
+@import "../../assets/mixins";
+
+.title {
+  @include headline-2;
+  margin-bottom: 38px;
+}

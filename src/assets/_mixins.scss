@@ -1,0 +1,150 @@
+@import "variables";
+@import "colors";
+@import "fontsLibrary";
+
+@mixin hover($_property, $_toValue) {
+  transition: #{$_property} 0.3s;
+  &:hover {
+    #{$_property}: $_toValue;
+  }
+}
+
+@mixin onPhone {
+  @media screen and (min-width: #{map-get($breakpoints, sm)}) {
+    @content;
+  }
+}
+
+@mixin onTablet {
+  @media screen and (min-width: #{map-get($breakpoints, md)}) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media screen and (min-width: #{map-get($breakpoints, lg)}) {
+    @content;
+  }
+}
+
+@mixin onLargeDesktop {
+  @media (min-width: #{map-get($breakpoints, xl)}) {
+    @content;
+  }
+}
+
+@mixin pageGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 4fr);
+  column-gap: 16px;
+
+  @include onTablet {
+    grid-template-columns: repeat(12, 4fr);
+  }
+
+  @include onDesktop {
+    grid-template-columns: repeat(24, 4fr);
+  }
+}
+
+@mixin headline-1 {
+  font-family: 'MontTitle', sans-serif;
+  color: $primary;
+
+  font-size: 32px;
+  line-height: 41px;
+  letter-spacing: -0.32px;
+
+  @include onTablet {
+    font-size: 48px;
+    line-height: 56px;
+    font-weight: 800;
+    letter-spacing: -0.48px;
+  }
+}
+
+@mixin headline-2 {
+  font-family: 'MontTitle', sans-serif;
+  color: $primary;
+
+  font-size: 22px;
+  line-height: 140%;
+
+  @include onTablet {
+    font-size: 32px;
+    line-height: 41px;
+    letter-spacing: -0.32px;
+  }
+}
+
+@mixin headline-3 {
+  font-family: 'MontTitle', sans-serif;
+
+  font-size: 20px;
+  font-weight: 700;
+
+  @include onTablet {
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 140%;
+  }
+}
+
+@mixin secondaryText {
+  font-family: 'MontRegular', sans-serif;
+
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 500;
+}
+
+@mixin mainText {
+  font-family: 'MontRegular', sans-serif;
+
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin headline-4 {
+  font-family: 'MontTitle', sans-serif;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  @include onTablet {
+    font-size: 20px;
+  }
+}
+
+@mixin uppercaseText {
+  font-family: 'MontTitle', sans-serif;
+
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 11px;
+  letter-spacing: 0.48px;
+  text-transform: uppercase;
+}
+
+@mixin buttonsText {
+  font-family: 'MontRegularSemiBold', sans-serif;
+
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+}
+
+@mixin bodyText {
+  font-family: 'MontRegular', sans-serif;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+}
+
+@mixin smallText {
+  font-family: 'MontRegularSemiBold', sans-serif;
+
+  font-size: 12px;
+  font-weight: 600;
+}

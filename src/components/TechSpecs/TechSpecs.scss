@@ -1,0 +1,45 @@
+@import '../../assets/mixins';
+@import '../../assets/colors';
+
+.TechSpecsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 56px;
+}
+
+.TechSpecs {
+  display: flex;
+  justify-content: space-between;
+  width: inherit;
+
+  &--list {
+    list-style: none;
+
+    &-item {
+      margin-bottom: 8px;
+
+      @include secondaryText;
+
+      color: $secondary;
+    }
+  }
+
+  &--characteristics {
+    list-style: none;
+
+    &-item {
+      margin-bottom: 8px;
+      text-align: end;
+
+      @include secondaryText;
+      color: $primary;
+    }
+  }
+}
+
+.TechSpecs--title {
+  @include headline-3;
+  margin-bottom: -16px;
+  color: $primary;
+}

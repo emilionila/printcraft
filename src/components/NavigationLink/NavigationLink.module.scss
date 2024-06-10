@@ -1,0 +1,42 @@
+@import '../../assets/colors';
+@import '../../assets/variables';
+@import '../../assets/mixins';
+
+.nav__link {
+  display: flex;
+  align-items: center;
+  color: $secondary;
+  height: 27px;
+  @include uppercaseText;
+  
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: $primary;
+  }
+
+  @include onTablet {
+    height: 47px;
+  }
+
+  @include onDesktop {
+    height: 63px;
+  }
+}
+
+.active {
+  position: relative;
+  color: $primary;
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: $primary;
+    border-radius: 8px;
+  }  
+}

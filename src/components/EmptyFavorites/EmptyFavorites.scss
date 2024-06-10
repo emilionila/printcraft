@@ -1,0 +1,43 @@
+@import "../../assets/normalize";
+@import '../../assets/colors.scss';
+@import '../../assets/variables';
+@import "../../assets/mixins";
+
+.EmptyFavorites {
+  &--section {
+    max-width: 640px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  &--title {
+    @include headline-2;
+    margin-bottom: 40px;
+    color: $primary;
+  }
+
+  &--image {
+    width: 100%;
+  }
+}
+
+.homeButton {
+  @include buttonsText;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 240px;
+  height: 48px;
+  margin-bottom: 80px;
+
+  text-decoration: none;
+  background: #313237;
+  border-radius: 4px;
+
+  color: $white;
+}

@@ -1,0 +1,17 @@
+@import "../../assets/normalize";
+@import "../../assets/variables";
+@import "../../assets/mixins";
+
+
+.backBtnContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.backBtn {
+  @include mainText;
+  color: $icons;
+}

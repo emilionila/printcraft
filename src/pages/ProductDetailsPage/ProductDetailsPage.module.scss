@@ -1,0 +1,55 @@
+@import "../../assets/normalize";
+@import "../../assets/variables";
+@import "../../assets/colors";
+@import "../../assets/mixins";
+
+.extendedDetails {
+  &__pictures {
+    margin: 0 auto;
+
+    @include onDesktop {
+      width: 600px;
+    }
+  }
+
+  &__about {
+    @include onDesktop {
+      width: 600px;
+    }
+  }
+}
+
+.topContent {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 40px 0;
+
+  @include onTablet {
+    gap: 0 23px;
+    grid-template-columns: repeat(2, 6fr);
+    margin-bottom: 64px;
+  }
+
+  @include onDesktop {
+    gap: 0 75px;
+    grid-template-columns: repeat(2, 6fr);
+    margin-bottom: 80px;
+  }
+}
+
+.bottomContent {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 40px 0;
+
+  @include onTablet {
+    gap: 0 23px;
+    grid-template-columns: repeat(1, 6fr);
+  }
+
+  @include onDesktop {
+    gap: 0 75px;
+    grid-template-columns: repeat(2, 6fr);
+    margin-bottom: 80px;
+  }
+}

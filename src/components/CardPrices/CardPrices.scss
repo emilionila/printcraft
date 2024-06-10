@@ -1,0 +1,24 @@
+@import '../../assets/variables';
+@import '../../assets/mixins';
+@import '../../assets/colors';
+
+.card {
+  &--price {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    @include headline-3;
+    width: 100%;
+
+    &-current {
+      margin-right: 8px;
+      color: $primary;
+      text-align: left;
+    }
+
+    &-maxPrice {
+      color: $secondary;
+      text-decoration: line-through;
+    }
+  }
+}

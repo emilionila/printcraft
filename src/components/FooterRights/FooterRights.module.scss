@@ -1,0 +1,16 @@
+@import "../../assets/normalize";
+@import "../../assets/variables";
+@import "../../assets/colors";
+@import "../../assets/mixins";
+
+.rightsTitle {
+  @include headline-2;
+  color: $primary;
+  margin-bottom: 24px;
+}
+
+.rightsText {
+  @include mainText;
+  color: $secondary;
+  margin-bottom: 24px;
+}

@@ -1,0 +1,10 @@
+@import "../../assets/normalize";
+@import "../../assets/variables";
+@import "../../assets/colors";
+@import "../../assets/mixins";
+
+.ProductControls {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}

@@ -1,0 +1,45 @@
+@import "../../assets/normalize";
+@import "../../assets/variables";
+@import "../../assets/colors";
+@import "../../assets/mixins";
+
+.breadcrumbs {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-bottom: 24px;
+  align-items: center;
+  @include mainText;
+}
+
+.crumbsContainer {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.homeImg {
+  display: block;
+}
+
+.arrowRight {
+  transform: rotateY(180deg);
+}
+
+.lastCrumb {
+  color: $icons;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @include onTablet {
+    max-width: 100%;
+  }
+}
+
+.crumb {
+  text-transform: capitalize;
+}

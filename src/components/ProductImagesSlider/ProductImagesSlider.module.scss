@@ -1,0 +1,92 @@
+@import '../../assets/normalize';
+@import '../../assets/colors';
+@import '../../assets/variables';
+@import "../../assets/mixins";
+
+.container {
+  margin-bottom: 23px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+
+  @include onTablet {
+    flex-direction: row;
+    align-items: start;
+  }
+}
+
+.photo__block {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  order: 1;
+  object-fit: contain;
+
+  @include onTablet {
+    flex-direction: column;
+    order: 0;
+  }
+
+  @include onDesktop {
+    gap: 16px;
+  }
+
+  &_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 50px;
+    width: 50px;
+
+    border: 1px solid $elements;
+
+    transition-duration: 0.3s;
+    transition-property: border-color;
+
+    @include onTablet {
+      height: 50px;
+      width: 50px;
+    }
+
+    @include onDesktop {
+      height: 80px;
+      width: 80px;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      border-color: $icons;
+    }
+
+    &__selected {
+      border-color: $primary;
+
+      &:hover {
+        border-color: $primary;
+      }
+    }
+  }
+
+  &_img {
+    border-radius: 4px;
+    padding: 5px;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  &_main {
+    width: 275px;
+    height: 275px;
+    object-fit: contain;
+
+    @include onDesktop {
+      height: 440px;
+      width: 440px;
+      padding: 7px;
+    }
+  }
+}

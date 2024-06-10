@@ -1,0 +1,41 @@
+@import "../../assets/normalize";
+@import "../../assets/variables";
+@import "../../assets/mixins";
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: inherit;
+  margin-bottom: 56px;
+
+  @include onTablet{
+    margin-bottom: 0;
+  }
+
+
+  &--list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    &-item {
+      padding-right: 8px;
+      margin-bottom: 8px;
+
+      @include smallText;
+      color: $secondary;
+    }
+  }
+
+  &--characteristics {
+    &-item {
+      margin-bottom: 8px;
+
+      @include smallText;
+      color: $primary;
+      text-align: end;
+    }
+  }
+}

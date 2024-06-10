@@ -1,0 +1,35 @@
+@import '../../assets/mixins';
+@import '../../assets/colors';
+
+.AboutProduct {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @include onTablet {
+    margin-bottom: 64px;
+
+    @include onDesktop {
+      margin-bottom: 0;}
+  }
+
+  &--title {
+    margin-bottom: -16px;
+    @include headline-3;
+    color: $primary;
+  }
+
+  &--block {
+    &-title {
+      margin-bottom: 16px;
+
+      @include headline-4;
+      color: $primary;
+    }
+
+    &-describe {
+      @include secondaryText;
+      color: $secondary;;
+    }
+  }
+}

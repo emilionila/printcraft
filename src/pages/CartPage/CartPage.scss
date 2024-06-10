@@ -1,0 +1,43 @@
+@import "../../assets/normalize";
+@import "../../assets/variables";
+@import "../../assets/colors";
+@import "../../assets/mixins";
+
+.CartPage {
+  &__top {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  &--title {
+    @include headline-1;
+    margin-bottom: 32px;
+  }
+
+  &__clear {
+    font-family: "MontRegular", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #b4bdc3;
+  }
+
+  &--section {
+    @include pageGrid;
+    row-gap: 32px;
+    grid-template-columns: repeat(1, 4fr);
+
+    @include onTablet {
+      grid-template-columns: repeat(1, 12fr);
+    }
+
+    @include onLargeDesktop {
+      grid-template-columns: 16fr 8fr;
+    }
+  }
+
+  &--block {
+    display: grid;
+    row-gap: 16px;
+  }
+}

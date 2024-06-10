@@ -1,0 +1,36 @@
+@import "../../assets/normalize";
+@import "../../assets/variables";
+@import "../../assets/mixins";
+
+.SortPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+  @include smallText;
+
+  @include onTablet {
+    flex-direction: row;
+  }
+
+  &--title {
+    margin-bottom: 4px;
+
+    color: $secondary;
+  }
+
+  &--fields {
+    width: 100%;
+    height: 40px;
+    padding: 10px 12px;
+
+    @include buttonsText;
+    color: $primary;
+
+    border: 1px solid $icons;
+
+    @include onTablet {
+      width: 176px;
+    }
+  }
+}

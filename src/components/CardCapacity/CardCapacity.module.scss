@@ -1,0 +1,41 @@
+@import "../../assets/normalize";
+@import "../../assets/variables";
+@import "../../assets/colors";
+@import "../../assets/mixins";
+
+.CardCapacity {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &__title {
+    @include smallText;
+    color: $secondary;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  &__item {
+    @include bodyText;
+    color: $primary;
+    padding: 7px 8px 4px;
+    border: 1px solid $icons;
+    transition: border 0.3s ease-in-out;
+
+    &:hover {
+      border: 1px solid $primary;
+    }
+  }
+}
+
+
+.active {
+  color: $white;
+  border: 1px solid $primary;
+  background-color: $primary;
+}

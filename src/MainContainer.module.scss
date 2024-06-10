@@ -1,0 +1,28 @@
+@import "assets/normalize";
+@import "assets/variables";
+@import "assets/mixins";
+
+.MainContainer {
+  padding: 0 16px;
+  margin: 0 auto 56px;
+  min-height: 100vh;
+
+  @include onTablet {
+    padding: 0 24px;
+    margin-bottom: 64px;
+  }
+
+  @include onDesktop {
+    margin-bottom: 80px;
+  }
+
+  @include onLargeDesktop {
+    max-width: 1200px;
+  }
+}
+
+.app {
+  @include onLargeDesktop {
+    margin: 0 auto;
+  }
+}

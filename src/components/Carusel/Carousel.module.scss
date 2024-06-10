@@ -1,0 +1,54 @@
+@import "../../assets/normalize";
+@import '../../assets/colors';
+@import '../../assets/variables';
+@import "../../assets/mixins";
+
+.carusel__title {
+  @include headline-2;
+  color: $primary;
+  margin-bottom: 20px;
+}
+
+.CarouselContainer {
+  position: relative;
+}
+
+.carousel-button-group {
+  display: flex;
+  gap: 16px;
+  position: absolute;
+  top: 5px;
+  right: 0;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+
+
+  &--disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
+.buttonRight {
+  transform: rotate(180deg);
+}
+
+.buttonImg {
+  width: 32px;
+}
+
+.Cards {
+  padding: 5px 16px 64px 0;
+}
+
+.carusel__sliderFull {
+  transition: transform 0.5s ease-in-out;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55); 
+  will-change: transform; 
+}

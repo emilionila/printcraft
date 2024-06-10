@@ -1,0 +1,77 @@
+@import "../../assets/normalize";
+@import "../../assets/variables";
+@import "../../assets/colors";
+@import "../../assets/mixins";
+
+.LoginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 12px;
+
+  @include onTablet {
+    width: 100%;
+  }
+
+  &__title {
+    @include headline-2;
+    text-align: center;
+    color: $primary;
+  }
+
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__label{
+    @include mainText;
+    color: $primary;
+  }
+
+  &__input {
+    padding: 6px;
+    @include mainText;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: $icons;
+  }
+
+  &__submitBtn {
+    @include secondaryText;
+    font-weight: 700;
+    color: $white;
+
+    background-color: $primary;
+    padding: 13.5px 85.5px;
+    margin-top: 16px;
+    border: 1px solid $primary;
+    transition: ease-in-out 0.2s;
+
+    @include onTablet {
+      width: 100%;
+    }
+
+    &:hover {
+      box-shadow: 0 3px 13px 0 rgba(23, 32, 49, 0.40);
+    }
+  }
+
+  &__haveAnAcc {
+    @include smallText;
+    color: $secondary;
+    text-align: center;
+    margin-bottom: 8px;
+
+  }
+
+  &__register {
+    @include buttonsText;
+    color: $primary;
+  }
+}
+
+

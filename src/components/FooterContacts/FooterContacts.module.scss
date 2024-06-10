@@ -1,0 +1,71 @@
+@import "../../assets/normalize";
+@import "../../assets/variables";
+@import "../../assets/colors";
+@import "../../assets/mixins";
+
+.FooterContacts {
+  &__mainTitle {
+    @include headline-2;
+    color: $primary;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  &__mainText {
+    @include mainText;
+    color: $secondary;
+    margin-bottom: 24px;
+  }
+
+  &__cardContainer {
+    display: grid;
+    grid-template-columns: repeat(1, 4fr);
+    gap: 16px;
+
+    @include onTablet {
+      grid-template-columns: repeat(2, 4fr);
+    }
+
+    @include onDesktop {
+      grid-template-columns: repeat(3, 4fr);
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 5%;
+    align-items: center;
+    padding: 16px 8px;
+    background-color: $hover-and-bg;
+    box-shadow: 0 0 12px 4px rgba(235,232,235,0.9);
+  }
+
+  &__personImg {
+    max-width: 100%;
+    width: 144px;
+    height: 144px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__PersonName {
+    @include headline-3;
+    color: $primary;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+    align-items: center;
+  }
+
+  &__linkItem {
+    max-width: 100%;
+    width: 24px;
+  }
+
+}

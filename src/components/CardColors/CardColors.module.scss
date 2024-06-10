@@ -1,0 +1,55 @@
+@import "../../assets/normalize";
+@import "../../assets/variables";
+@import "../../assets/colors";
+@import "../../assets/mixins";
+
+.CardColors {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &__top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &__title {
+      @include smallText;
+      color: $secondary;
+    }
+
+    &__id {
+      @include smallText;
+      color: $icons;
+    }
+  }
+}
+
+.colors__list {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.color__item {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.color__item__wrapper {
+  display: flex;
+  padding: 2px;
+  border-radius: 50%;
+  transition: border 0.3s ease-in-out;
+  border: 0.5px solid $icons;
+
+  &:hover {
+    border: 1px solid $primary;
+  }
+}
+
+.active {
+  border: 0.5px solid $primary;
+}
